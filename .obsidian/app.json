@@ -1,5 +1,6 @@
 {
   "legacyEditor": false,
   "livePreview": true,
-  "attachmentFolderPath": "resources"
+  "attachmentFolderPath": "resources",
+  "promptDelete": false
 }
