@@ -1,2 +1,0 @@
-# myObsidianRepo
-my obsidian repository
