@@ -2,5 +2,7 @@
   "legacyEditor": false,
   "livePreview": true,
   "attachmentFolderPath": "resources",
-  "promptDelete": false
+  "promptDelete": false,
+  "showLineNumber": true,
+  "newFileLocation": "current"
 }

@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "1d43bb47ccd5a7a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "f90cd1996cb8f961",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5544416d0f8a4a3a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "358ee860c3331196",
+    "type": "split",
+    "children": [
+      {
+        "id": "98dcf410c865b411",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55f6ec34ab14a9f3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a9d6f918d1e72d78",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "221f901ae2aa7a35",
+    "type": "split",
+    "children": [
+      {
+        "id": "3d1c5712652a1a02",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "54ac89eefccb674d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dc2316496862d4bc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "canvas:新建白板": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
+    }
+  },
+  "active": "5544416d0f8a4a3a",
+  "lastOpenFiles": [
+    "resources/0a29c1d3e1a53b2523d2dcab3a59886b_3ce4094fbea14e438.jpg",
+    "monitor/12｜网络监控：如何监控网络链路和网络设备？-极客时间.md",
+    "monitor/11｜机器监控：操作系统有哪些指标需要重点关注？-极客时间.md",
+    "monitor/08｜如何用 Nightingale 解决 Prometheus 的告警管理问题？-极客时间.md",
+    "monitor/06｜PromQL有哪些常见的使用场景？-极客时间.md",
+    "monitor/05｜Prometheus中有哪些关键设计？-极客时间.md",
+    "monitor/03｜架构概述：一个监控系统的典型架构是什么样的？-极客时间.md",
+    "monitor/02｜基本概念：监控圈子有哪些行业黑话？-极客时间.md",
+    "monitor/01｜背景信息：监控需求以及开源方案的横评对比-极客时间.md",
+    "Tomcat/5-Jetty对比/12-Jetty架构.md",
+    "monitor/04｜如何快速搭建Prometheus系统？-极客时间.md~",
+    "resources/yyb2dbda85b408350ccc0a57a0ae15cb_10caa2405ef94e23b.jpg",
+    "resources/yy228e4d6378f7ffc7bac3765b5525a9_fa9c38c46342425a8.png",
+    "resources/fb5a50e976687376703a0b44c3166344_e0232f2fd91d4a55b.jpg",
+    "resources/faf28d6c6409936a0300a36d914f4f84_f72f197c26224689b.png",
+    "resources/f572c8cf62d7b52668c6fd71cdb7887c_c1961ebc6e61446c8.png",
+    "resources/f40db5919edc384c17fc2e148c2ayy53_17de3ac571d34095a.png",
+    "resources/f0a3eca509ac8bebcdb07685c4ba3d28_43e2c26f8ab44cf0a.png",
+    "resources/ee5a62f16cb36b57cf560c1b00e41822_13928a982ef34c25b.png",
+    "resources/ed4598ac72020b58e03b84152ea2185e_fa73815ac3c344b69.png",
+    "resources/e679ea2310fd68aa7391b018382c3d13_1c1ba8b0ed02448ab.png",
+    "monitor/22｜事件管理（下）：如何保证事件的闭环处理？-极客时间.md",
+    "monitor/21｜事件管理（上）：事件降噪的几个典型手段-极客时间.md",
+    "monitor/20｜应用监控：如何使用日志来监控应用？-极客时间.md",
+    "monitor/19｜应用监控：如何使用埋点方式对应用监控？-极客时间.md",
+    "monitor/18｜组件监控：Kubernetes 控制面组件的关键指标与数据采集-极客时间.md",
+    "monitor/17｜组件监控：Kubernetes Node组件的关键指标与数据采集-极客时间.md",
+    "monitor/16｜组件监控：Elasticsearch的关键指标及采集方法有哪些？-极客时间.md",
+    "monitor/15｜组件监控：Kafka的关键指标及采集方法有哪些？-极客时间.md",
+    "monitor/14｜组件监控：Redis的关键指标及采集方法有哪些？-极客时间.md",
+    "monitor/13｜组件监控：MySQL的关键指标及采集方法有哪些？-极客时间.md",
+    "monitor/10｜监控概论（下）：监控数据的采集方式及原理-极客时间.md",
+    "monitor/09｜监控概论（上）：有哪些方法可以指导监控数据采集？-极客时间.md",
+    "monitor/07｜如何解决Prometheus的存储容量问题？-极客时间.md",
+    "monitor/04｜如何快速搭建Prometheus系统？-极客时间.md",
+    "monitor",
+    "_resources",
+    "Tomcat/4-性能优化/11-排障.md",
+    "Tomcat/4-性能优化/10-调优.md",
+    "Tomcat/5-Jetty对比/未命名",
+    "Tomcat/3-通用组件",
+    "Tomcat/2-容器",
+    "Tomcat/1-连接器",
+    "Tomcat/0-总览",
+    "Untitled.canvas"
+  ]
+}
