@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28cdcd43-40ce-4d59-8c60-db40a4041855" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="28cdcd43-40ce-4d59-8c60-db40a4041855" name="Changes" comment="资源文件 配置文件" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,8 +48,16 @@
       <workItem from="1679879294180" duration="100000" />
       <workItem from="1679879687677" duration="111000" />
       <workItem from="1679886592796" duration="180000" />
-      <workItem from="1679886789096" duration="756000" />
+      <workItem from="1679886789096" duration="1079000" />
     </task>
+    <task id="LOCAL-00001" summary="资源文件 配置文件">
+      <created>1679893864818</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679893864818</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,5 +73,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="资源文件 配置文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="资源文件 配置文件" />
   </component>
 </project>
