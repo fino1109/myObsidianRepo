@@ -9,75 +9,25 @@
 在这里呢，我犯的错误其实有两个。第一，我不应该因为虚方法的性能效率，而放弃良好的设计。第二，通常来说，Java 虚拟机中虚方法调用的性能开销并不大，有些时候甚至可以完全消除。第一个错误是原则上的，这里就不展开了。至于第二个错误，我们今天便来聊一聊 Java 虚拟机中虚方法调用的具体实现。
 
 首先，我们来看一个模拟出国边检的小例子。
-
-abstract 
-
- class 
-
- Passenger {
-
-abstract 
-
- void 
-
- passThroughImmigration();
-
-@Override
-
-public 
-
- String 
-
- toString() { ... }
-
+```java
+abstract class Passenger {
+  abstract void passThroughImmigration();
+  @Override
+  public String toString() {
+    ...
+  }
 }
-
-class 
-
- ForeignerPassenger 
-
- extends 
-
- Passenger {
-
-@Override
-
-void 
-
- passThroughImmigration() { 
-
+class ForeignerPassenger extends Passenger {
+  @Override
+  void passThroughImmigration() {}
 }
-
+class ChinesePassenger extends Passenger {
+  @Override
+  void passThroughImmigration() {}
+  void visitDutyFreeShops() {}
 }
-
-class 
-
- ChinesePassenger 
-
- extends 
-
- Passenger {
-
-@Override
-
-void 
-
- passThroughImmigration() { 
-
-}
-
-void 
-
- visitDutyFreeShops() { 
-
-}
-
-}
-
-Passenger passenger = ...
-
-passenger.passThroughImmigration();
-
+Passenger passenger = ... passenger.passThroughImmigration();
+```
 这里我定义了一个抽象类，叫做 Passenger，这个类中有一个名为 passThroughImmigration 的抽象方法，以及重写自 Object 类的 toString 方法。
 
 然后，我将 Passenger 粗暴地分为两种：ChinesePassenger 和 ForeignerPassenger。
@@ -189,125 +139,3 @@ Java 虚拟机中的即时编译器会使用内联缓存来加速动态绑定。
 当碰到新的调用者时，如果其动态类型与缓存中的类型匹配，则直接调用缓存的目标方法。
 
 否则，Java 虚拟机将该内联缓存劣化为超多态内联缓存，在今后的执行过程中直接使用方法表进行动态绑定。
-
-在今天的实践环节，我们来观测一下单态内联缓存和超多态内联缓存的性能差距。为了消除方法内联的影响，请使用如下的命令。
-
-public 
-
- abstract 
-
- class 
-
- Passenger {
-
-abstract 
-
- void 
-
- passThroughImmigration();
-
-public 
-
- static 
-
- void 
-
- main(String\[\] args) {
-
-Passenger 
-
- a 
-
- = 
-
- new 
-
- ChinesePassenger();
-
-Passenger 
-
- b 
-
- = 
-
- new 
-
- ForeignerPassenger();
-
-long 
-
- current 
-
- = System.currentTimeMillis();
-
-for (int 
-
- i 
-
- = 
-
- 1; i <= 2\_000\_000_000; i++) {
-
-if (i % 100\_000\_000 == 0) {
-
-long 
-
- temp 
-
- = System.currentTimeMillis();
-
-System.out.println(temp - current);
-
-current = temp;
-
-}
-
-Passenger 
-
- c 
-
- = (i < 1\_000\_000_000) ? a : b;
-
-c.passThroughImmigration();
-
-}
-
-}
-
-}
-
-class 
-
- ChinesePassenger 
-
- extends 
-
- Passenger {
-
-@Override 
-
- void 
-
- passThroughImmigration() {}
-
-}
-
-class 
-
- ForeignerPassenger 
-
- extends 
-
- Passenger {
-
-@Override 
-
- void 
-
- passThroughImmigration() {}
-
-}
-
-![[56758ca937966ea60942b022e7561772_8dc1ff59d1994f499.png]]
-
-© 版权归极客邦科技所有，未经许可不得传播售卖。 页面已增加防盗追踪，如有侵权极客邦将依法追究其法律责任。

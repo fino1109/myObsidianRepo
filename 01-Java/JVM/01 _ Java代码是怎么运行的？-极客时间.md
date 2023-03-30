@@ -201,7 +201,3 @@ $ awk 'NR==1,/iconst\_1/{sub(/iconst\_1/, "iconst_2")} 1' Foo.jasm.1 > Foo.jasm
 $ java -cp /path/to/asmtools.jar org.openjdk.asmtools.jasm.Main Foo.jasm
 
 $ java Foo
-```
-![[56758ca937966ea60942b022e7561772_f79b58345fff4b619.png]]
-
-© 版权归极客邦科技所有，未经许可不得传播售卖。 页面已增加防盗追踪，如有侵权极客邦将依法追究其法律责任。
