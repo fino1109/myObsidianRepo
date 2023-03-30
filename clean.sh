@@ -1,3 +1,5 @@
+SALVEIFS=$IFS
+IFS=$(echo -en "\n\b")
 rem=0
 scan=0
 for i in $(ls ./resources)
@@ -11,6 +13,7 @@ do
 		rem=$((rem+1))
 	fi
 done
+IFS=$SAVEIFS
 echo "$scan checked"
 echo "$rem removed"
 
