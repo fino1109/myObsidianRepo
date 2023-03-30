@@ -112,6 +112,3 @@ MySQLQueryInterruptedException: Query execution was interrupted
 
 期待在留言区看到你的见解。也欢迎你点击“请朋友读”，把今天的内容分享给身边的朋友，邀请他一起讨论。
 
-![[72e45301d18bd3f5e06ebb8f234031d8_e77ab749bf224550b.png]]
-
-© 版权归极客邦科技所有，未经许可不得传播售卖。 页面已增加防盗追踪，如有侵权极客邦将依法追究其法律责任。

@@ -240,6 +240,3 @@ curl -L -O http://central.maven.org/maven2/org/openjdk/jol/jol-cli/0.9/jol-cli-0
 
 java -cp jol-cli-0.9-full.jar org.openjdk.jol.Main internals java.lang.String
 
-![[56758ca937966ea60942b022e7561772_948387f13a7d44899.png]]
-
-© 版权归极客邦科技所有，未经许可不得传播售卖。 页面已增加防盗追踪，如有侵权极客邦将依法追究其法律责任。
