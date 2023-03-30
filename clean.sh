@@ -3,7 +3,7 @@ scan=0
 for i in $(ls ./resources)
 do 
 	scan=$((scan+1))
-	text=`grep -R $i ./`
+	text=`grep -R $i --exclude-dir={.git/,.obsidian/,.idea/,resources/} ./`
 	echo "checking $i"
 	if [ -z "$text" ]; then
 		rm -rf "./resources/$i"
@@ -12,5 +12,5 @@ do
 	fi
 done
 echo "$scan checked"
-echo "$num removed"
+echo "$rem removed"
 
