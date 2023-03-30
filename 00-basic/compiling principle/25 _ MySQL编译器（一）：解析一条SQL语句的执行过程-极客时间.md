@@ -56,7 +56,7 @@ mysql>
 
 我也把 MySQL 执行 SQL 语句时的一些重要程序入口记录了下来，这也需要你重点关注。它反映了执行 SQL 过程中的一些重要的处理阶段，包括语法分析、处理上下文、引用消解、优化和执行。你在这些地方都可以设置断点。
 
-![](../../_resources/829ff647ecefed1ca2653696085f7a90_17cc684f72a6417e9.jpg)
+![[829ff647ecefed1ca2653696085f7a90_17cc684f72a6417e9.jpg]]
 
 图 2：MySQL 执行 SQL 语句时的部分重要程序入口
 
@@ -266,13 +266,13 @@ $$= $1; /*直接返回query_specification的节点*/
 
 其中，Item 代表了与“值”有关的节点，它的子类能够用于表示字段、常量和表达式等。你可以通过 Item 的 val\_int()、val\_str() 等方法获取它的值。
 
-![](../../_resources/cfa126a6144186deafe7d9caff56f304_c929dd94600b43eba.jpg)
+![[cfa126a6144186deafe7d9caff56f304_c929dd94600b43eba.jpg]]
 
 图 5：解析树的树节点（部分）
 
 由于 SQL 是一个个单独的语句，所以 select、insert、update 等语句，它们都各自有不同的根节点，都是 Parse\_tree\_root 的子类。
 
-![](../../_resources/4a1152566c2ccab84d2f5022f44a022a_7c6adee4c46649239.jpg)
+![[4a1152566c2ccab84d2f5022f44a022a_7c6adee4c46649239.jpg]]
 
 图 6：解析树的根节点
 
@@ -288,7 +288,7 @@ mysqld --debug="d,parser_debug"
 
 然后，你可以通过客户端执行一个简单的 SQL 语句：“select 2+3*5”。在终端，会输出语法分析的过程。这里我截取了一部分界面，通过这些输出信息，你能看出 LR 算法执行过程中的移进、规约过程，以及工作区内和预读的信息。
 
-![](../../_resources/69e4644e93a5156a6695eff41d162891_7eb2362c3b574e678.jpg)
+![[69e4644e93a5156a6695eff41d162891_7eb2362c3b574e678.jpg]]
 
 我来给你简单地复现一下这个解析过程。
 
@@ -336,37 +336,37 @@ opt\_window\_clause
 
 你还需要注意，这个时候，老的状态都被压到了栈里，所以栈里会有 0 和 42 两个状态。栈里的这些状态，其实记录了推导的过程，让我们知道下一步要怎样继续去做推导。
 
-![](../../_resources/c3a585e8a1c3753137ff83fac5368576_d1e4beda98f641719.jpg)
+![[c3a585e8a1c3753137ff83fac5368576_d1e4beda98f641719.jpg]]
 
 图 9：做完前 3 步之后，栈里的情况
 
 第 4 步，移进 NUM。这时又进入一个新状态 720。
 
-![](../../_resources/048df36542d61ba8f8f688c58e00a3b9_ee8fa6f21eb245bfa.jpg)
+![[048df36542d61ba8f8f688c58e00a3b9_ee8fa6f21eb245bfa.jpg]]
 
 图 10：移进 NUM 后的 DFA
 
 而旧的状态也会入栈，记录下推导路径：
 
-![](../../_resources/bcd744e5d278ce37d0abb1583ceccb51_b316174d3ce045188.jpg)
+![[bcd744e5d278ce37d0abb1583ceccb51_b316174d3ce045188.jpg]]
 
 图 11：移进 NUM 后栈的状态
 
 第 5~8 步，依次依据 NUM\_literal->NUM、literal->NUM\_literal、simple\_expr->literal、bit\_expr->simple_expr 这四条产生式做规约。这时候，编译器预读的 Token 是 + 号，所以你会看到，图中的红点停在 + 号前。
 
-![](../../_resources/33b3f6b88214412b6d29b2ce2b03dc7a_026b0dd4e58042f8a.jpg)
+![[33b3f6b88214412b6d29b2ce2b03dc7a_026b0dd4e58042f8a.jpg]]
 
 图 12：第 8 步之后的 DFA
 
 第 9~10 步，移进 + 号和 NUM。这个时候，状态又重新回到了 720。这跟第 4 步进入的状态是一样的。
 
-![](../../_resources/e3976970cd368c8e9c1547bbc2c6f48d_a7068060e7344cb2b.jpg)
+![[e3976970cd368c8e9c1547bbc2c6f48d_a7068060e7344cb2b.jpg]]
 
 图 13：第 10 步之后的 DFA
 
 而栈里的目前有 5 个状态，记录了完整的推导路径。
 
-![](../../_resources/142e374173e90ba657579f67566bb755_36c83ab0383249698.jpg)
+![[142e374173e90ba657579f67566bb755_36c83ab0383249698.jpg]]
 
 图 14：第 10 步之后栈的状态
 
@@ -386,7 +386,7 @@ MySQL 的语法分析器是采用 bison 工具生成的。这至少说明，语�
 
 我依然把本讲的内容给你整理成了一张知识地图，供你参考和复习回顾：
 
-![](../../_resources/04cc0ce4fb5d78d7d9aa18e03088f95b_cc916e0e91ce4afda.jpg)
+![[04cc0ce4fb5d78d7d9aa18e03088f95b_cc916e0e91ce4afda.jpg]]
 
 ## 一课一思
 

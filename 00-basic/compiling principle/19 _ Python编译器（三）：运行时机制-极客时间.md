@@ -12,7 +12,7 @@
 
 这行代码对应的字节码如下。其中，前两行指令实现了“a=1”的功能（后两行是根据 Python 的规定，在执行完一个模块之后，缺省返回一个 None 值）。
 
-![](../../_resources/8ae69517e1bfec78fddea57e4da89e50_03e45d115ecb4bfc9.jpg)
+![[8ae69517e1bfec78fddea57e4da89e50_03e45d115ecb4bfc9.jpg]]
 
 你需要在 \_PyEval\_EvalFrameDefault() 函数这里设置一个断点，在这里实际解释指令并执行。
 

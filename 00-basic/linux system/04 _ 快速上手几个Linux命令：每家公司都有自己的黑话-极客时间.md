@@ -74,7 +74,7 @@ cliu8:x:1000:
 
 /root 和 /home/cliu8 是什么呢？它们分别是 root 用户和 cliu8 用户的主目录。主目录是用户登录进去后默认的路径。其实 Windows 里面也是这样的。当我们打开文件夹浏览器的时候，左面会有“文档”“图片”“下载”等文件夹，路径在 C:\\Users\\cliu8 下面。要注意，同一台电脑，不同的用户情况会不一样。
 
-![](../../_resources/d21ce3cd2ade7b71300df6a805b45aa7_f9c35248050b49c69.png)
+![[d21ce3cd2ade7b71300df6a805b45aa7_f9c35248050b49c69.png]]
 
 /bin/bash 的位置是用于配置登录后的默认交互命令行的，不像 Windows，登录进去是界面，其实就是 explorer.exe。而 Linux 登录后的交互命令行是一个解析脚本的程序，这里配置的是 /bin/bash。
 
